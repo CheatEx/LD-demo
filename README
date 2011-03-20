@@ -1,0 +1,21 @@
+This is a simple demo project about importing and (re)using linked open data sources.
+
+Main idea
+---------
+User enters name of some place (geographical areas are expected) and can see a list of videos about habitants of this area.
+
+Requirements
+------------
+ - Python 2.6
+ - rdflib 3.0.0
+ - Sesame 2.3.2
+
+Preparations
+------------
+ 1. Load geospecies.org dataset in demo sesame repository.
+
+General plan
+------------
+ 1. Search for given location name using geonames.org service. Result: list of all related locations from geanames dataset.
+ 2. Building a list of inhabit animals for all previously found locations. Result: list of all animals from geospecies dataset.
+ 3. Get rdf descrition of found animals from BCC's wildlife portal and looking for video clips about them in BBC archive.
